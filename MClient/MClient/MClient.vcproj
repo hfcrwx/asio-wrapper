@@ -39,7 +39,7 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				AdditionalIncludeDirectories="&quot;.\GeneratedFiles&quot;;&quot;.&quot;;&quot;$(QTDIR)\include&quot;;&quot;.\GeneratedFiles\$(ConfigurationName)&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtOpenGL&quot;"
+				AdditionalIncludeDirectories="C:\local\boost_1_47_0;.\GeneratedFiles;.;&quot;$(QTDIR)\include&quot;;&quot;.\GeneratedFiles\$(ConfigurationName)&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtOpenGL&quot;;..\..\share\network\packet;..\..\share\network\include;.\src"
 				PreprocessorDefinitions=",UNICODE,WIN32,QT_LARGEFILE_SUPPORT;QT_DLL;QT_NO_DEBUG,NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB"
 				RuntimeLibrary="2"
 				TreatWChar_tAsBuiltInType="false"
@@ -56,11 +56,11 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="qtmain.lib QtCore4.lib QtGui4.lib QtOpenGL4.lib opengl32.lib glu32.lib"
+				AdditionalDependencies="qtmain.lib QtCore4.lib QtGui4.lib QtOpenGL4.lib network.lib opengl32.lib glu32.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
-				AdditionalLibraryDirectories="$(QTDIR)\lib"
+				AdditionalLibraryDirectories="C:\local\boost_1_47_0\lib32;..\..\share\network\lib;&quot;$(QTDIR)\lib&quot;"
 				GenerateDebugInformation="false"
-				SubSystem="2"
+				SubSystem="1"
 			/>
 			<Tool
 				Name="VCALinkTool"
@@ -82,6 +82,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
+				CommandLine="copy ..\..\share\network\lib\Network.dll .\&#x0D;&#x0A;copy $(QtDir)\bin\QtGui4.dll .\&#x0D;&#x0A;&#x0D;&#x0A;copy $(QtDir)\bin\QtOpenGL4.dll .\&#x0D;&#x0A;"
 			/>
 		</Configuration>
 		<Configuration
@@ -108,7 +109,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories=".\GeneratedFiles;.;&quot;$(QTDIR)\include&quot;;&quot;.\GeneratedFiles\$(ConfigurationName)&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtOpenGL&quot;;..\..\share\network\packet;..\..\share\network\include;.\src"
+				AdditionalIncludeDirectories="C:\local\boost_1_47_0;.\GeneratedFiles;.;&quot;$(QTDIR)\include&quot;;&quot;.\GeneratedFiles\$(ConfigurationName)&quot;;&quot;$(QTDIR)\include\QtCore&quot;;&quot;$(QTDIR)\include\QtGui&quot;;&quot;$(QTDIR)\include\QtOpenGL&quot;;..\..\share\network\packet;..\..\share\network\include;.\src"
 				PreprocessorDefinitions=",UNICODE,WIN32,QT_LARGEFILE_SUPPORT;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_OPENGL_LIB"
 				RuntimeLibrary="3"
 				TreatWChar_tAsBuiltInType="false"
@@ -125,9 +126,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="qtmaind.lib QtCored4.lib QtGuid4.lib QtOpenGLd4.lib glaux.lib networkd.lib opengl32.lib glu32.lib"
+				AdditionalDependencies="qtmaind.lib QtCored4.lib QtGuid4.lib QtOpenGLd4.lib networkd.lib opengl32.lib glu32.lib"
 				OutputFile="$(OutDir)\$(ProjectName).exe"
-				AdditionalLibraryDirectories="..\..\share\network\lib;&quot;$(QTDIR)\lib&quot;"
+				AdditionalLibraryDirectories="C:\local\boost_1_47_0\lib32;..\..\share\network\lib;&quot;$(QTDIR)\lib&quot;"
 				GenerateDebugInformation="true"
 				SubSystem="1"
 			/>
@@ -151,7 +152,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy ..\..\share\network\lib\Networkd.dll .\&#x0D;&#x0A;copy $(QtDir)\bin\QtGuid4.dll .\&#x0D;&#x0A;copy $(QtDir)\bin\QtOpenGLd4.dll .\"
+				CommandLine="copy ..\..\share\network\lib\Networkd.dll .\&#x0D;&#x0A;copy $(QtDir)\bin\QtGuid4.dll .\&#x0D;&#x0A;copy $(QtDir)\bin\QtOpenGLd4.dll .\&#x0D;&#x0A;"
 			/>
 		</Configuration>
 	</Configurations>
